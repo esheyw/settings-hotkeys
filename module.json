@@ -1,0 +1,38 @@
+{
+  "id": "settings-hotkeys",
+  "title": "Settings Hotkeys",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11"
+  },
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
+  "esmodules": ["scripts/init.mjs"],
+  "authors": [
+    {
+      "name": "Emmanuel Wineberg",
+      "email": "esheyw@gmail.com",
+      "url": "https://github.com/esheyw",
+      "discord": "esheyw"
+    }
+  ],
+  "license": "LICENSE",
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "hbs", "json"]
+    }
+  },
+  "manifest": "updatedByRelease",
+  "url": "updatedByRelease",
+  "download": "updatedByRelease",
+  "readme": "https://github.com/esheyw/settings-hotkeys/blob/main/README.md",
+  "bugs": "https://github.com/esheyw/settings-hotkeys/issues",
+  "changelog": "https://github.com/esheyw/settings-hotkeys/blob/main/CHANGELOG.md"
+}
