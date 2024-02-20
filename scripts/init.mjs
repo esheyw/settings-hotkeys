@@ -1,7 +1,7 @@
 import { registerKeybinds } from "./keybinds.mjs";
 import { registerSettings } from "./settings.mjs";
 
-Hooks.once('init', ()=> {
+Hooks.once("init", () => {
   registerSettings();
   registerKeybinds();
 });

@@ -1,1 +1,1 @@
-export const MODULE_ID = `settings-hotkeys`
+export const MODULE_ID = "settings-hotkeys";

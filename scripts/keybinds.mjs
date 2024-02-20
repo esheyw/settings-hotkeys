@@ -27,7 +27,7 @@ function handleWindow(id) {
 
 export function registerKeybinds() {
   game.keybindings.register(MODULE, "settingsHotkey", {
-    name: `Toggle Settings Window`,
+    name: "SettingsHotkeys.ToggleSettings",
     editable: [
       {
         key: "KeyZ",
@@ -37,7 +37,7 @@ export function registerKeybinds() {
     onDown: () => handleWindow("client-settings"),
   });
   game.keybindings.register(MODULE, "keybindingsHotkey", {
-    name: `Open Configure Controls menu`,
+    name: "SettingsHotkeys.ToggleControls",
     editable: [
       {
         key: "KeyX",
@@ -47,7 +47,7 @@ export function registerKeybinds() {
     onDown: () => handleWindow("keybindings"),
   });
   game.keybindings.register(MODULE, "moduleManagementHotkey", {
-    name: `Open Module Management`,
+    name: "SettingsHotkeys.ToggleModules",
     editable: [
       {
         key: "KeyZ",

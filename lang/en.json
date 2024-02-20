@@ -1,10 +1,13 @@
-{ 
+{
   "SettingsHotkeys": {
     "Setting": {
       "FocusBeforeClose": {
         "Name": "Focus Before Close",
         "Hint": "Should the hotkeys bring open windows to fore if open but not the current window, or always close a window if it's open?"
       }
-    }
-  } 
+    },
+    "ToggleSettings": "Toggle Configure Settings",
+    "ToggleControls": "Toggle Configure Controls",
+    "ToggleModules": "Toggle Module Management"
+  }
 }
