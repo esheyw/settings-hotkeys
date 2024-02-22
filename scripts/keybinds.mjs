@@ -1,3 +1,4 @@
+import { MODULE_ID } from "./constants.mjs";
 import { setting } from "./settings.mjs";
 
 function handleWindow(id) {
@@ -26,7 +27,7 @@ function handleWindow(id) {
 }
 
 export function registerKeybinds() {
-  game.keybindings.register(MODULE, "settingsHotkey", {
+  game.keybindings.register(MODULE_ID, "settingsHotkey", {
     name: "SettingsHotkeys.ToggleSettings",
     editable: [
       {
@@ -36,7 +37,7 @@ export function registerKeybinds() {
     ],
     onDown: () => handleWindow("client-settings"),
   });
-  game.keybindings.register(MODULE, "keybindingsHotkey", {
+  game.keybindings.register(MODULE_ID, "keybindingsHotkey", {
     name: "SettingsHotkeys.ToggleControls",
     editable: [
       {
@@ -46,7 +47,7 @@ export function registerKeybinds() {
     ],
     onDown: () => handleWindow("keybindings"),
   });
-  game.keybindings.register(MODULE, "moduleManagementHotkey", {
+  game.keybindings.register(MODULE_ID, "moduleManagementHotkey", {
     name: "SettingsHotkeys.ToggleModules",
     editable: [
       {
