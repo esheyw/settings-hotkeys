@@ -6,7 +6,7 @@ function handleWindow(id) {
   const existing = Object.values(ui.windows).find((w) => w.id === id);
   if (existing) {
     if (ui.activeWindow !== existing && setting("focus-before-close")) {
-      existing.render(true);
+      existing.bringToTop();
     } else {
       existing.close();
     }
