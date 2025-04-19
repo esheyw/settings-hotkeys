@@ -2,4 +2,5 @@ jsconfig.json
 .vscode/
 packs/**
 node_modules
-app
+foundry
+foundry-config.json

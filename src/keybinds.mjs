@@ -3,23 +3,26 @@ import { setting } from "./settings.mjs";
 
 function handleWindow(id) {
   let app;
-  const existing = Object.values(ui.windows).find((w) => w.id === id);
+  const existing = foundry.applications.instances.get(id);
+  const behaviour = setting("close-behavior").toLowerCase();
+  const focus = behaviour.includes("focus");
+  const close = behaviour.includes("close");
   if (existing) {
-    if (ui.activeWindow !== existing && setting("focus-before-close")) {
-      existing.bringToTop();
-    } else {
+    if (ui.activeWindow !== existing && focus) {
+      existing.bringToFront();
+    } else if (close) {
       existing.close();
     }
   } else {
     switch (id) {
-      case "client-settings":
+      case "settings-config":
         app = game.settings.sheet;
         break;
-      case "keybindings":
-        app = new KeybindingsConfig();
+      case "controls-config":
+        app = new foundry.applications.sidebar.apps.ControlsConfig();
         break;
       case "module-management":
-        app = new ModuleManagement();
+        app = new foundry.applications.sidebar.apps.ModuleManagement();
         break;
     }
     app.render(true, { focus: true });
@@ -35,9 +38,9 @@ export function registerKeybinds() {
         modifiers: ["Alt"],
       },
     ],
-    onDown: () => handleWindow("client-settings"),
+    onDown: () => handleWindow("settings-config"),
   });
-  game.keybindings.register(MODULE_ID, "keybindingsHotkey", {
+  game.keybindings.register(MODULE_ID, "controlsHotkey", {
     name: "SettingsHotkeys.ToggleControls",
     editable: [
       {
@@ -45,7 +48,7 @@ export function registerKeybinds() {
         modifiers: ["Alt"],
       },
     ],
-    onDown: () => handleWindow("keybindings"),
+    onDown: () => handleWindow("controls-config"),
   });
   game.keybindings.register(MODULE_ID, "moduleManagementHotkey", {
     name: "SettingsHotkeys.ToggleModules",

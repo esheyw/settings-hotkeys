@@ -1,3 +1,9 @@
+## Version 1.1.0
+
+- Compatibility update for v13
+- Changed setting definitions, so if you had Focus Before Close enabled, you'll have to re-enable that behaviour
+- Added option to never close windows on repeated keypress
+
 ## Version 1.0.3
 
 - Compatibility bump only, no code changes

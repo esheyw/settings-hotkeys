@@ -1,10 +1,10 @@
 {
   "id": "settings-hotkeys",
   "title": "Settings Hotkeys",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "compatibility": {
-    "minimum": "10",
-    "verified": "12.331"
+    "minimum": "13",
+    "verified": "13.340"
   },
   "languages": [
     {
@@ -14,7 +14,7 @@
       "flags": {}
     }
   ],
-  "esmodules": ["scripts/init.mjs"],
+  "esmodules": ["src/settings-hotkeys.mjs"],
   "authors": [
     {
       "name": "Emmanuel Wineberg",

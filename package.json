@@ -1,0 +1,19 @@
+{
+  "name": "settings-hotkeys",
+  "version": "1.1.0",
+  "description": "Hotkeys for the settings apps of FoundryVTT",
+  "main": "scripts/settings-hotkeys.mjs",
+  "scripts": {
+    "createSymlinks": "node ./tools/create-symlinks.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esheyw/settings-hotkeys.git"
+  },
+  "author": "esheyw@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esheyw/settings-hotkeys/issues"
+  },
+  "homepage": "https://github.com/esheyw/settings-hotkeys#readme"
+}

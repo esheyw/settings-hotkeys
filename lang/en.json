@@ -1,9 +1,14 @@
 {
   "SettingsHotkeys": {
     "Setting": {
-      "FocusBeforeClose": {
-        "Name": "Focus Before Close",
-        "Hint": "Should the hotkeys bring open windows to fore if open but not the current window, or always close a window if it's open?"
+      "CloseBehavior": {
+        "Name": "Behavior of Repeated Hotkey Presses",
+        "Hint": "Close (default): Close the window unconditionally \n Focus/Close: Focus the window if not currently focused, otherwise close \n Focus: Only focus the window if not currently focused, never close",
+        "Choices": {
+          "close": "Close",
+          "focusClose": "Focus/Close",
+          "focus": "Focus"
+        }
       }
     },
     "ToggleSettings": "Toggle Configure Settings",
