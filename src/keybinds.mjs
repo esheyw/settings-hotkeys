@@ -1,19 +1,30 @@
 import { MODULE_ID } from "./constants.mjs";
 import { setting } from "./settings.mjs";
 
+const AppV2 = foundry.applications.api.ApplicationV2;
+
 function handleWindow(id) {
-  let app;
   const existing = foundry.applications.instances.get(id);
   const behaviour = setting("close-behavior").toLowerCase();
   const focus = behaviour.includes("focus");
   const close = behaviour.includes("close");
   if (existing) {
-    if (ui.activeWindow !== existing && focus) {
+    const isTopApp = ui.activeWindow
+      ? ui.activeWindow === existing
+      : existing instanceof AppV2
+        ? existing.position.zIndex === AppV2._maxZ
+        : null;
+
+    if (isTopApp === null)
+      throw new Error("Foundry has broken both methods of determining the Application on top of the stack.");
+
+    if (!isTopApp && focus) {
       existing.bringToFront();
     } else if (close) {
       existing.close();
     }
   } else {
+    let app;
     switch (id) {
       case "settings-config":
         app = game.settings.sheet;

@@ -1,3 +1,7 @@
+## Version 1.3.0
+
+- Future-proof (for now) the check for current top Application.
+
 ## Version 1.2.1
 
 - Actually fix release.
