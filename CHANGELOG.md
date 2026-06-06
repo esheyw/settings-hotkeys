@@ -1,3 +1,8 @@
+## Version 1.2.0
+
+- Fix packaging so the module actually installs
+- List as verified for 14.363.
+
 ## Version 1.1.0
 
 - Compatibility update for v13

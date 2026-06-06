@@ -25,7 +25,7 @@ jobs:
           flags.hotReload: null
 
       # Create a zip file with all files required by the module to add to the release
-      - run: zip -r ./module.zip module.json LICENSE styles/*.css styles/*.map scripts/ templates/ lang/
+      - run: zip -r ./module.zip module.json LICENSE styles/*.css styles/*.map scr/ templates/ lang/
 
       # Create a release for this specific version
       - name: Update Release with Files
@@ -40,8 +40,8 @@ jobs:
           artifacts: "./module.json, ./module.zip"
           tag: ${{ github.event.release.tag_name }}
           body: ${{ github.event.release.body }}
-          
-      # POST to the package admin release endpoint    
+
+      # POST to the package admin release endpoint
       - name: Publish Module to FoundryVTT Website
         id: publish-to-foundry-website
         uses: cs96and/FoundryVTT-release-package@v1
