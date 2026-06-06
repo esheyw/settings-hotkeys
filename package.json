@@ -1,6 +1,6 @@
 {
   "name": "settings-hotkeys",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Hotkeys for the settings apps of FoundryVTT",
   "main": "scripts/settings-hotkeys.mjs",
   "scripts": {

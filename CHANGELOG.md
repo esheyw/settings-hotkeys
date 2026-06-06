@@ -1,3 +1,7 @@
+## Version 1.2.1
+
+- Actually fix release.
+
 ## Version 1.2.0
 
 - Fix packaging so the module actually installs
